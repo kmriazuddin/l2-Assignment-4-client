@@ -11,9 +11,8 @@ export const baseApi = createApi({
     getProducts: builder.query({
       query: (filters) => {
         const params = new URLSearchParams(filters).toString();
-        console.log(params);
         return {
-          url: `/products?${params}`,
+          url: `/product?${params}`,
           method: "GET",
         };
       },
