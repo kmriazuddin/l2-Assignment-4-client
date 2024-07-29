@@ -1,3 +1,4 @@
+import BannerSection from "./BannerSection";
 import CarouselImage from "./CarouselImage";
 import FeaturedProducts from "./FeaturedProducts";
 import Services from "./Services";
@@ -8,6 +9,7 @@ const Home = () => {
       <CarouselImage />
       <Services />
       <FeaturedProducts />
+      <BannerSection />
     </div>
   );
 };
