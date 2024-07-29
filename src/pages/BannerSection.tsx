@@ -6,8 +6,6 @@ const BannerSection = () => {
       cover: "https://i.ibb.co/hKBGc0j/featured-2.png",
     },
     {
-      name: "iMac Pro Xeon Radeon Vega",
-      price: "6199",
       cover: "https://i.ibb.co/nf1Dw19/featured-1-1.png",
     },
   ];

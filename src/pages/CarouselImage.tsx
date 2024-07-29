@@ -33,8 +33,8 @@ const CarouselImage = () => {
         <CarouselContent>
           {keyboardBrands?.map((brand) => (
             <CarouselItem key={brand.brand}>
-              <div className="bg-teal-300 p-4 mt-16 rounded-md md:flex items-center justify-between">
-                <div className="md:flex justify-center  md:w-1/2 p-8 w-full ">
+              <div className="bg-teal-300 p-4 mt-10 rounded-md md:flex items-center justify-between">
+                <div className="md:flex justify-center md:w-1/2 p-8 w-full">
                   <div className="w-full">
                     <h2 className="tracking-widest mb-2 leading-snug text-2xl md:text-3xl font-bold w-full">
                       {brand.title}
@@ -70,8 +70,8 @@ const CarouselImage = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="bg-slate-500 text-white  md:mx-12" />
-        <CarouselNext className="bg-slate-500 text-white  md:mx-12" />
+        <CarouselPrevious className="bg-slate-500 text-white md:mx-12" />
+        <CarouselNext className="bg-slate-500 text-white md:mx-12 hidden md:inline-flex" />
       </Carousel>
     </div>
   );
