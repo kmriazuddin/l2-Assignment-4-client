@@ -31,14 +31,13 @@ const FeaturedProducts = () => {
       />
       <div className="text-3xl mb-2 font-bold text-center">
         <div className="grid md:grid-cols-4 grid-cols-1 gap-5 justify-between items-center mt-10 rounded-lg">
-          {/* card */}
           {displayedProducts?.map((product: any) => {
             return (
               <div
                 key={product._id}
                 className="border-gray-200 bg-cyan-500 border p-4"
               >
-                <Badge className="relative hover:text-black hover:bg-lime-500 left-40 text-lg rounded-r-lg text-white bg-pink-500">
+                <Badge className="relative hover:text-black hover:bg-lime-500 text-lg right-32 md:right-40 rounded-l-lg text-white bg-pink-500">
                   &#2547;{product?.price}
                 </Badge>
                 <img
@@ -71,7 +70,7 @@ const FeaturedProducts = () => {
                     <span className="font-medium"> {product?.quantity}</span>
                   </h2>
                   <NavLink
-                    to={`/product/${product?._id}`}
+                    to={`/products/${product?._id}`}
                     className="bg-pink-500 text-white text-lg font-medium px-3 py-2 rounded-xl"
                   >
                     Details
@@ -80,7 +79,6 @@ const FeaturedProducts = () => {
               </div>
             );
           })}
-          {/* card end */}
         </div>
         {!showAll && (
           <button

@@ -50,7 +50,7 @@ const Navbar = () => {
               to="about"
               className={({ isActive }) => (isActive ? " text-pink-600" : "")}
             >
-              About Us
+              About
             </NavLink>
           </li>
           <li className="text-xl">
@@ -58,7 +58,7 @@ const Navbar = () => {
               to="/contact"
               className={({ isActive }) => (isActive ? " text-pink-600" : "")}
             >
-              Contact Us
+              Contact
             </NavLink>
           </li>
           <li className="text-xl">
