@@ -71,7 +71,7 @@ const SingleProduct = () => {
       <div className="md:flex items-center gap-8">
         <div className="md:w-1/2 w-full rounded-lg p-4">
           <div
-            className="w-full"
+            className="w-full p-4"
             style={{
               background: "#e0e0e0",
               boxShadow: "44px 44px 100px #d5d5d5, -44px -44px 100px #ebebeb",

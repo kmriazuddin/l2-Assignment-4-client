@@ -11,13 +11,10 @@ export interface Product {
   rating: number;
   description: string;
 }
-
-// Cart item interface
 export interface CartItem extends Product {
   cartQuantity: number;
 }
 
-// Initial state interface
 export interface CartState {
   items: CartItem[];
   totalOrderPrice: number;
@@ -41,11 +38,8 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action: PayloadAction<Product>) => {
-      console.log(action.payload);
       const product = action.payload;
       const existingItem = state.items.find((item) => item._id === product._id);
-
-      console.log(existingItem);
 
       if (existingItem) {
         console.log("exist");
@@ -58,8 +52,6 @@ export const cartSlice = createSlice({
           return showAlert("Product is out of stock!");
         }
       } else {
-        console.log("new");
-
         if (product.quantity > 0) {
           product.quantity = product.quantity - 1;
           state.items.push({ ...product, cartQuantity: 1 });

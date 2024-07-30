@@ -25,8 +25,6 @@ const Cart = () => {
 
   useEffect(() => {
     if (isLoading) return;
-
-    // Check stock availability
     const outOfStockItems = cartItems.filter((cartItem) => {
       const product = products.data.find(
         (item: any) => item._id === cartItem._id
@@ -34,7 +32,6 @@ const Cart = () => {
 
       return product ? cartItem.cartQuantity > product.quantity : true;
     });
-    console.log(outOfStockItems, "outOfStockItems");
     setIsButtonDisabled(outOfStockItems.length > 0);
   }, [cartItems, products, isLoading]);
 
@@ -43,7 +40,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="md:px-12 w-full p-4 rounded-md">
+    <div tabIndex={1} className="md:px-12 w-full p-4 rounded-md">
       <div>
         {cartItems.length > 0 && (
           <SectionTitle
@@ -53,8 +50,8 @@ const Cart = () => {
         )}
 
         {cartItems?.length > 0 ? (
-          <div className="bg-pink-300 w-full h-full space-y-3 rounded-xl p-[5px] ">
-            <div className="bg-white rounded-md p-4  space-y-3  w-full h-full ">
+          <div className="w-full h-full space-y-3 rounded-xl p-[5px] ">
+            <div className="bg-cyan-50 rounded-md p-4  space-y-3  w-full h-full ">
               <Table className="">
                 <TableHeader className=" bg-cyan-500 text-white">
                   <TableRow className="rounded-lg">
@@ -83,8 +80,8 @@ const Cart = () => {
                 </TableBody>
               </Table>
             </div>
-            <div>
-              <h2 className=" text-end mx-12 text-lg font-medium">
+            <div className="bg-cyan-200">
+              <h2 className="text-end mx-12 text-lg font-medium">
                 Total Price: ${totalOrderPrice.toFixed(2)}
               </h2>
             </div>

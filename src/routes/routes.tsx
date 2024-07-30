@@ -2,6 +2,9 @@ import App from "@/App";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Home from "@/pages/Home";
+import CheckOut from "@/pages/OrderProcess/CheckOut";
+import OrderConfirmed from "@/pages/OrderProcess/OrderConfirmed";
+import ProductManage from "@/pages/ProductManage";
 import AllProducts from "@/pages/products/AllProducts";
 import Cart from "@/pages/products/Cart";
 import SingleProduct from "@/pages/products/SingleProduct";
@@ -33,8 +36,20 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: "/product-manage",
+        element: <ProductManage />,
+      },
+      {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/checkout",
+        element: <CheckOut />,
+      },
+      {
+        path: "/order-confirmed",
+        element: <OrderConfirmed />,
       },
     ],
   },

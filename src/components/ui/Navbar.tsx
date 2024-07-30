@@ -63,10 +63,10 @@ const Navbar = () => {
           </li>
           <li className="text-xl">
             <NavLink
-              to="/product-dashboard"
+              to="/product-manage"
               className={({ isActive }) => (isActive ? " text-pink-600" : "")}
             >
-              Product Management
+              Product Manage
             </NavLink>
           </li>
         </ul>

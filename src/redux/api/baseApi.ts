@@ -40,9 +40,8 @@ export const baseApi = createApi({
     }),
     updateSingleProducts: builder.mutation({
       query: (options) => {
-        console.log("Inside base api ==>", options);
         return {
-          url: `/products/${options.id}`,
+          url: `/product/${options.id}`,
           method: "PUT",
           body: options.data,
         };
@@ -58,7 +57,6 @@ export const baseApi = createApi({
     }),
     addOrders: builder.mutation({
       query: (order) => {
-        console.log("saving data==>", order);
         return {
           url: "/order/create-order",
           method: "POST",
