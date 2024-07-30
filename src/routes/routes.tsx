@@ -3,6 +3,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Home from "@/pages/Home";
 import AllProducts from "@/pages/products/AllProducts";
+import Cart from "@/pages/products/Cart";
 import SingleProduct from "@/pages/products/SingleProduct";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

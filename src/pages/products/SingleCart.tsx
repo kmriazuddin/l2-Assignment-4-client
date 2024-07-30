@@ -26,7 +26,6 @@ export type TTodoCartProps = {
 };
 
 const SingleCart = ({ cart }: TTodoCartProps) => {
-  console.log(cart);
   const dispatch = useAppDispatch();
 
   const handleDelete = (cartId: string) => {
@@ -67,7 +66,7 @@ const SingleCart = ({ cart }: TTodoCartProps) => {
           />
         </TableCell>
       </div>
-      <TableCell className="text-center text-base">{cart.title}</TableCell>
+      <TableCell className="text-justify text-base">{cart.title}</TableCell>
 
       <TableCell className="text-center text-base">
         {cart.cartQuantity}
@@ -77,15 +76,15 @@ const SingleCart = ({ cart }: TTodoCartProps) => {
         ${(cart?.cartQuantity * cart?.price).toFixed(2)}
       </TableCell>
       <TableCell className="text-center text-base">
-        <div className="px-2 py-1 rounded-md flex items-center w-full  border border-[#4A249D]">
+        <div className="px-2 py-1 rounded-md flex items-center w-full">
           <FaPlusCircle
             onClick={() => handleIncrease(cart?._id)}
-            className="text-[#4A249D] mx-1 text-xl"
+            className="text-cyan-500 mx-1 text-xl"
           />
-          <div className="text-[#4A249D]  text-3xl">|</div>
+          <div className="text-green-500 text-3xl">|</div>
           <FaMinusCircle
             onClick={() => handleDecrease(cart?._id)}
-            className="text-[#4A249D] mx-1  text-xl"
+            className="text-rose-500 mx-1  text-xl"
           />
         </div>
       </TableCell>
@@ -95,9 +94,8 @@ const SingleCart = ({ cart }: TTodoCartProps) => {
           onClick={() => handleDelete(cart?._id)}
           className="bg-red-600 p-3 rounded-full"
         >
-          <RiDeleteBack2Fill className="text-white  text-lg" />
+          <RiDeleteBack2Fill className="text-white text-lg" />
         </button>
-
         <button></button>
       </TableCell>
     </TableRow>
