@@ -27,11 +27,7 @@ const FeaturedProducts = () => {
   const displayedProducts = showAll ? data?.data : data?.data.slice(0, 8);
 
   return (
-    <div
-      className="md:px-12 w-full p-4 mt-16 rounded-md"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+    <div className="md:px-12 w-full p-4 mt-16 rounded-md">
       <SectionTitle
         subHeading="Check & Get Your Desired Product!"
         heading="Featured Products"
