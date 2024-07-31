@@ -4,6 +4,10 @@ import { useEffect } from "react";
 import { useAppSelector } from "./redux/hooks/hooks";
 import MaInLayout from "./components/layout/MainLayout";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const App = () => {
   const cartItems = useAppSelector((state) => state.cart.items);
 

@@ -1,4 +1,7 @@
 import SectionTitle from "@/components/ui/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const BrandPartners = () => {
   const brands = [
@@ -24,7 +27,11 @@ const BrandPartners = () => {
 
   return (
     <div>
-      <div className="md:px-12 w-full p-4 mt-16 rounded-md ">
+      <div
+        className="md:px-12 w-full p-4 mt-16 rounded-md"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <SectionTitle
           subHeading="Our Brand Partners"
           sectionImg="https://i.ibb.co/SdK0n79/section-title-vector.png"

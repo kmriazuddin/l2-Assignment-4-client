@@ -7,6 +7,10 @@ import { FaStar } from "react-icons/fa6";
 import Rating from "react-rating";
 import { NavLink } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const FeaturedProducts = () => {
   const [showAll, setShowAll] = useState(false);
   const { data, isLoading } = useGetProductsQuery(undefined, {
@@ -23,7 +27,11 @@ const FeaturedProducts = () => {
   const displayedProducts = showAll ? data?.data : data?.data.slice(0, 8);
 
   return (
-    <div className="md:px-12 w-full p-4 mt-16 rounded-md ">
+    <div
+      className="md:px-12 w-full p-4 mt-16 rounded-md"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <SectionTitle
         subHeading="Check & Get Your Desired Product!"
         heading="Featured Products"

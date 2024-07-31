@@ -1,8 +1,15 @@
 import { MdOutlineSavings } from "react-icons/md";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const ServiceAdvertisement = () => {
   return (
-    <div className="bg-green-600 py-3 md:mx-12">
+    <div
+      className="bg-green-600 py-3 md:mx-12"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div className="grid grid-cols-1 md:grid-cols-3 items-center space-y-2 md:space-y-0">
         <div className="flex items-center md:text-center m-auto">
           <MdOutlineSavings className="text-lg md:text-4xl font-bold text-white" />
@@ -12,7 +19,7 @@ const ServiceAdvertisement = () => {
         </div>
         <p className="text-center md:text-start text-slate-200 w-3/4 md:w-full m-auto">
           Vertical filter Another great way of allowing the visitors to define
-          their product browsing process – include a detailed. Designed for
+          their product browsing process - include a detailed. Designed for
           modern sites.
         </p>
         <div className="text-center">

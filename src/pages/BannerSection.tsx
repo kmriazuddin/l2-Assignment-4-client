@@ -1,4 +1,7 @@
 import SectionTitle from "@/components/ui/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const BannerSection = () => {
   const banners = [
@@ -10,7 +13,7 @@ const BannerSection = () => {
     },
   ];
   return (
-    <div className="my-10">
+    <div className="my-10" data-aos="fade-up" data-aos-duration="1000">
       <SectionTitle
         subHeading="New Collection Coming"
         sectionImg="https://i.ibb.co/SdK0n79/section-title-vector.png"

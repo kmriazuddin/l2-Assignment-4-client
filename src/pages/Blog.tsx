@@ -1,8 +1,11 @@
 import SectionTitle from "@/components/ui/SectionTitle";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 const Blog = () => {
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="2000">
       <div className="md:mx-12 p-4 mt-16">
         <SectionTitle
           subHeading="Find Your Accessories"
