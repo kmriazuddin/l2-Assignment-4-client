@@ -122,6 +122,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="title"
                 className="col-span-3"
                 name="title"
+                defaultValue={product.title}
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -131,6 +132,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="image"
                 className="col-span-3"
                 name="image"
+                defaultValue={product.image}
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -140,6 +142,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="brand"
                 className="col-span-3"
                 name="brand"
+                defaultValue={product.brand}
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -149,6 +152,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="quantity"
                 className="col-span-3"
                 name="quantity"
+                defaultValue={product.quantity}
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -158,6 +162,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="price"
                 className="col-span-3"
                 name="price"
+                defaultValue={product.price}
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -167,6 +172,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="rating"
                 className="col-span-3"
                 name="rating"
+                defaultValue={product.rating}
               />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
@@ -176,6 +182,7 @@ const UpdateProduct = ({ product }: any) => {
                 id="description"
                 className="col-span-3"
                 name="description"
+                defaultValue={product.description}
               />
             </div>
           </div>
