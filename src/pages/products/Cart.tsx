@@ -40,7 +40,7 @@ const Cart = () => {
   };
 
   return (
-    <div tabIndex={1} className="md:px-12 w-full p-4 rounded-md">
+    <div tabIndex={1} className="md:px-12 w-full p-4 rounded-md h-screen">
       <div>
         {cartItems.length > 0 && (
           <SectionTitle

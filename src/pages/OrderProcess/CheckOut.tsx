@@ -11,6 +11,7 @@ const CheckOut = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const [addOrder, { error }] = useAddOrdersMutation();
+  console.log(cartItems.length);
 
   let errorMessage: string | null = null;
   // @ts-expect-error: Unreachable code error
@@ -89,7 +90,7 @@ const CheckOut = () => {
                 Total Taka: &#2547;{totalOrderPrice.toFixed(2)}
               </h2>
               <h2 className=" rounded-md p-2 text-base mb-2 text-center">
-                Back to product section, Just <br /> for you.{" "}
+                You can go back if you want,{" "}
                 <NavLink to="/products" className={"text-green-500 font-bold"}>
                   View All Products
                 </NavLink>
@@ -105,10 +106,21 @@ const CheckOut = () => {
               </div>
             </div>
           </div>
+          <div className="border md:w-8/12 flex justify-center items-center border-dashed py-2 mb-4 px-3 mx-auto rounded-md border-cyan-400">
+            <div className=" ">
+              <h2 className="rounded-md font-medium text-lg p-2 mb-2 text-center">
+                Shipping And Delivery
+              </h2>
+              <h2 className=" rounded-md p-2 text-base mb-2 text-center">
+                Orders are delivered on business days Saturday-Friday excluding
+                public holidays.
+              </h2>
+            </div>
+          </div>
         </div>
-        <div className="md:w-1/2 w-full rounded-lg p-4">
+        <div className="md:w-1/2 w-full rounded-lg p-4 border">
           <div className=" w-full">
-            <div>
+            <div className="bg-cyan-200 px-2">
               <h2 className="text-3xl tracking-widest mb-1 font-bold">
                 Your Cart
               </h2>
@@ -175,13 +187,17 @@ const CheckOut = () => {
                   </label>
                 </div>
               </div>{" "}
-              <button
-                onClick={handlePlaceOrder}
-                type="submit"
-                className="text-white font-medium text-lg mt-6 mx-auto  px-5 py-2 rounded-lg  bg-cyan-500 hover:bg-pink-500"
-              >
-                Next Process{" "}
-              </button>
+              {cartItems.length ? (
+                <button
+                  onClick={handlePlaceOrder}
+                  type="submit"
+                  className="text-white font-medium text-lg mt-6 mx-auto  px-5 py-2 rounded-lg  bg-cyan-500 hover:bg-pink-500"
+                >
+                  Next Process{" "}
+                </button>
+              ) : (
+                ""
+              )}
             </form>
           </div>
         </div>
